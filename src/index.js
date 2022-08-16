@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import FilterButton from "./components/FilterButton";
+// import FilterButton from "./components/FilterButton";
 
 const todoDetails = JSON.parse(localStorage.getItem("todos")) || [
   { id: "todo-0", name: "Мда", completed: false },

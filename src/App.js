@@ -1,7 +1,7 @@
 import "./App.css";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
-import FilterButton from "./components/FilterButton";
+// import FilterButton from "./components/FilterButton";
 
 import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
@@ -60,26 +60,26 @@ function App(props) {
       />
     ));
 
-  const filterList = props.FILTER_NAMES.map((name) => (
-    <FilterButton
-      key={name}
-      name={name}
-      isPressed={name === filter}
-      setFilter={setFilter}
-    />
-  ));
+  // const filterList = props.FILTER_NAMES.map((name) => (
+  //   <FilterButton
+  //     key={name}
+  //     name={name}
+  //     isPressed={name === filter}
+  //     setFilter={setFilter}
+  //   />
+  // ));
 
   
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(tasks));
-    console.log(JSON.parse(localStorage.getItem("todos")));
-  }, [tasks]);
+  // useEffect(() => {
+  //   localStorage.setItem("todos", JSON.stringify(tasks));
+  //   console.log(JSON.parse(localStorage.getItem("todos")));
+  // }, [tasks]);
 
   return (
     <div className="todoapp">
       <h1>Список делишек</h1>
       <Form addTask={addTask} />
-      <div className="filters btn-group stack-exception flex">{filterList}</div>
+      {/* // <div className="filters btn-group stack-exception flex">{filterList}</div>  */}
 
       <h2 id="list-heading"></h2>
       <div
