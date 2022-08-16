@@ -41,7 +41,7 @@ export default function Todo(props) {
             setEditing(false);
           }}
         >
-          Cancel
+          Отменить
         </button>
         <button
           type="submit"
@@ -51,7 +51,7 @@ export default function Todo(props) {
             setEditing(false);
           }}
         >
-          Save
+          Сохранить
         </button>
       </div>
     </form>
@@ -79,7 +79,7 @@ export default function Todo(props) {
             setEditing(true);
           }}
         >
-          Edit
+          Изменить
         </button>
         <button
           type="button"
@@ -88,7 +88,7 @@ export default function Todo(props) {
             props.deleteTask(props.id);
           }}
         >
-          Delete
+          Удалить
         </button>
       </div>
     </div>

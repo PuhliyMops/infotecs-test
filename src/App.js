@@ -8,7 +8,7 @@ import { nanoid } from "nanoid";
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("все");
 
   const addTask = (name) => {
     if (name === "") return;
@@ -69,10 +69,7 @@ function App(props) {
     />
   ));
 
-  const countString = `${tasks.length} ${
-    tasks.length === 1 ? "task" : "tasks"
-  } remaining`;
-
+  
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(tasks));
     console.log(JSON.parse(localStorage.getItem("todos")));
@@ -80,11 +77,11 @@ function App(props) {
 
   return (
     <div className="todoapp">
-      <h1>Todont</h1>
+      <h1>Список делишек</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception flex">{filterList}</div>
 
-      <h2 id="list-heading">{countString}</h2>
+      <h2 id="list-heading"></h2>
       <div
         role="list"
         className="todo-list stack-large stack-exception"

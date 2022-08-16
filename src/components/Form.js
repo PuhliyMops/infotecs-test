@@ -23,12 +23,12 @@ function Form(props) {
           className="todoinput"
           name="text"
           autoComplete="off"
-          placeholder="New todo..."
+          placeholder="Новое дельце"
           value={name}
           onChange={handleChange}
         />
         <button type="submit" className="submitButton btn">
-          Add
+          Добавить
         </button>
       </div>
     </form>
